@@ -53,17 +53,20 @@ welcome.textContent = "Hola, " + logged
 // CERRAR SESION
 function logout(){
 
-localStorage.clear()
+localStorage.removeItem("loggedUser")
 
 window.location.href = "index.html"
 
 }
+
+
+// BORRAR USUARIO
 function resetUser(){
 
 localStorage.removeItem("user")
 localStorage.removeItem("password")
 localStorage.removeItem("loggedUser")
 
-document.getElementById("message").textContent="Usuario eliminado"
+document.getElementById("message").textContent = "Usuario eliminado"
 
 }
