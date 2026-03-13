@@ -9,3 +9,10 @@ welcome.textContent = "Hola, " + user
 }
 
 }
+function logout(){
+
+localStorage.removeItem("loggedUser")
+
+window.location = "index.html"
+
+}

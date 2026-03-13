@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tienda UTVT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo-area">
+<img src="logo-utvt.png" class="logo">
+<h2>Tienda UTVT</h2>
+</div>
+
+<div class="menu">
+
+<span id="welcome"></span>
+
+<button onclick="toggleCart()">🛒 <span id="count">0</span></button>
+
+<a href="login.html">Cerrar sesión</a>
+
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<h1>Bienvenido a la Tienda UTVT</h1>
+
+<p>Encuentra accesorios tecnológicos</p>
+
+</section>
+
+
+<div class="products">
+
+<div class="card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/869/869636.png">
+
+<h3>Audífonos Gamer</h3>
+
+<p>$300</p>
+
+<button onclick="addToCart('Audifonos Gamer',300)">
+Agregar al carrito
+</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2285/2285531.png">
+
+<h3>Teclado Mecánico</h3>
+
+<p>$500</p>
+
+<button onclick="addToCart('Teclado Mecánico',500)">
+Agregar al carrito
+</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
+
+<h3>Mouse Gamer</h3>
+
+<p>$200</p>
+
+<button onclick="addToCart('Mouse Gamer',200)">
+Agregar al carrito
+</button>
+
+</div>
+
+</div>
+
+
+<div class="cart-panel" id="cartPanel">
+
+<h2>Carrito</h2>
+
+<ul id="cartItems"></ul>
+
+<p>Total: $<span id="total">0</span></p>
+
+<button onclick="clearCart()">Vaciar carrito</button>
+
+</div>
+
+<button onclick="logout()">Cerrar sesión</button>
+
+<script src="app.js"></script>
+
+</body>
+</html>
