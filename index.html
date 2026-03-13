@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tienda Demo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Tienda Online</h1>
+
+<a href="login.html">Login</a>
+<a href="cart.html">Carrito</a>
+
+<div class="products">
+
+<div class="product">
+<h3>Audífonos</h3>
+<p>$300</p>
+<button onclick="addToCart('Audífonos',300)">Agregar</button>
+</div>
+
+<div class="product">
+<h3>Teclado</h3>
+<p>$500</p>
+<button onclick="addToCart('Teclado',500)">Agregar</button>
+</div>
+
+<div class="product">
+<h3>Mouse</h3>
+<p>$200</p>
+<button onclick="addToCart('Mouse',200)">Agregar</button>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
