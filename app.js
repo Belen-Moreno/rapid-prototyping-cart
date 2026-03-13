@@ -58,3 +58,12 @@ localStorage.removeItem("loggedUser")
 window.location = "index.html"
 
 }
+function resetUser(){
+
+localStorage.removeItem("user")
+localStorage.removeItem("password")
+localStorage.removeItem("loggedUser")
+
+document.getElementById("message").textContent="Usuario eliminado"
+
+}
