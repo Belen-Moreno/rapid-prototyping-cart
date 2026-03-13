@@ -1,45 +1,76 @@
-function login(){
+let cart = JSON.parse(localStorage.getItem("cart")) || []
 
-let user = document.getElementById("user").value
+function toggleCart(){
 
-localStorage.setItem("user", user)
+document.getElementById("cartPanel").classList.toggle("active")
 
-alert("Login exitoso")
+showCart()
 
-window.location = "index.html"
 }
 
-
-function addToCart(name, price){
-
-let cart = JSON.parse(localStorage.getItem("cart")) || []
+function addToCart(name,price){
 
 cart.push({name,price})
 
-localStorage.setItem("cart", JSON.stringify(cart))
+localStorage.setItem("cart",JSON.stringify(cart))
 
-alert("Producto agregado")
+updateCount()
+
 }
-
 
 function showCart(){
 
-let cart = JSON.parse(localStorage.getItem("cart")) || []
+let list=document.getElementById("cartItems")
 
-let list = document.getElementById("cart")
+let total=0
 
-cart.forEach(product => {
+list.innerHTML=""
 
-let li = document.createElement("li")
+cart.forEach((item,index)=>{
 
-li.textContent = product.name + " - $" + product.price
+let li=document.createElement("li")
+
+li.innerHTML=item.name+" - $"+item.price+
+" <button onclick='removeItem("+index+")'>❌</button>"
 
 list.appendChild(li)
 
+total+=item.price
+
 })
 
+document.getElementById("total").textContent=total
+
 }
 
-if(document.getElementById("cart")){
+function removeItem(index){
+
+cart.splice(index,1)
+
+localStorage.setItem("cart",JSON.stringify(cart))
+
 showCart()
+
+updateCount()
+
 }
+
+function clearCart(){
+
+cart=[]
+
+localStorage.setItem("cart",JSON.stringify(cart))
+
+showCart()
+
+updateCount()
+
+}
+
+function updateCount(){
+
+document.getElementById("count").textContent=cart.length
+
+}
+
+updateCount()

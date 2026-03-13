@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Tienda Online</title>
+<title>Mi Tienda</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav class="navbar">
+
 <h2>Mi Tienda</h2>
 
 <div class="menu">
 <a href="login.html">Iniciar sesión</a>
 <a href="login.html">Registrarse</a>
-<a href="cart.html">Carrito</a>
+<button onclick="toggleCart()">🛒 Carrito (<span id="count">0</span>)</button>
 </div>
-</nav>
 
+</nav>
 
 <div class="container">
 
 <div class="card">
 <h3>Audífonos</h3>
 <p>$300</p>
-<button onclick="addToCart('Audífonos',300)">Agregar al carrito</button>
+<button onclick="addToCart('Audífonos',300)">Agregar</button>
 </div>
 
 <div class="card">
 <h3>Teclado</h3>
 <p>$500</p>
-<button onclick="addToCart('Teclado',500)">Agregar al carrito</button>
+<button onclick="addToCart('Teclado',500)">Agregar</button>
 </div>
 
 <div class="card">
 <h3>Mouse</h3>
 <p>$200</p>
-<button onclick="addToCart('Mouse',200)">Agregar al carrito</button>
+<button onclick="addToCart('Mouse',200)">Agregar</button>
 </div>
+
+</div>
+
+<div class="cart-panel" id="cartPanel">
+
+<h3>Carrito</h3>
+
+<ul id="cartItems"></ul>
+
+<p>Total: $<span id="total">0</span></p>
+
+<button onclick="clearCart()">Vaciar carrito</button>
 
 </div>
 
