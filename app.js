@@ -1,76 +1,44 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || []
+function register(){
 
-function toggleCart(){
+let user = document.getElementById("user").value
+let password = document.getElementById("password").value
 
-document.getElementById("cartPanel").classList.toggle("active")
+localStorage.setItem("user", user)
+localStorage.setItem("password", password)
 
-showCart()
-
-}
-
-function addToCart(name,price){
-
-cart.push({name,price})
-
-localStorage.setItem("cart",JSON.stringify(cart))
-
-updateCount()
+document.getElementById("message").textContent="Usuario registrado"
 
 }
 
-function showCart(){
+function login(){
 
-let list=document.getElementById("cartItems")
+let user = document.getElementById("user").value
+let password = document.getElementById("password").value
 
-let total=0
+let savedUser = localStorage.getItem("user")
+let savedPass = localStorage.getItem("password")
 
-list.innerHTML=""
+if(user === savedUser && password === savedPass){
 
-cart.forEach((item,index)=>{
+localStorage.setItem("loggedUser",user)
 
-let li=document.createElement("li")
+window.location="index.html"
 
-li.innerHTML=item.name+" - $"+item.price+
-" <button onclick='removeItem("+index+")'>❌</button>"
+}else{
 
-list.appendChild(li)
-
-total+=item.price
-
-})
-
-document.getElementById("total").textContent=total
+document.getElementById("message").textContent="Datos incorrectos"
 
 }
 
-function removeItem(index){
+}
+let loggedUser = localStorage.getItem("loggedUser")
 
-cart.splice(index,1)
+if(loggedUser){
 
-localStorage.setItem("cart",JSON.stringify(cart))
+let welcome = document.getElementById("welcome")
 
-showCart()
-
-updateCount()
-
+if(welcome){
+welcome.textContent = "Hola, " + loggedUser
 }
 
-function clearCart(){
-
-cart=[]
-
-localStorage.setItem("cart",JSON.stringify(cart))
-
-showCart()
-
-updateCount()
-
 }
-
-function updateCount(){
-
-document.getElementById("count").textContent=cart.length
-
-}
-
-updateCount()

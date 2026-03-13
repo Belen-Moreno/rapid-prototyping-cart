@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login</title>
+<title>Login - Tienda UTVT</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="login-page">
 
-<div class="login-box">
+<div class="login-container">
 
-<h2>Iniciar Sesión</h2>
+<img src="logo-utvt.png" class="logo">
 
-<input id="user" placeholder="Usuario">
+<h2>Bienvenido</h2>
 
-<button onclick="login()">Entrar</button>
+<input id="user" placeholder="Nombre de usuario">
+
+<input id="password" type="password" placeholder="Contraseña">
+
+<button onclick="login()">Iniciar Sesión</button>
+
+<button onclick="register()">Registrarse</button>
+
+<p id="message"></p>
 
 </div>
 

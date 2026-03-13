@@ -1,87 +1,46 @@
-body{
-font-family: Arial;
-margin:0;
-background:#f4f4f4;
-}
+/* LOGIN PAGE */
 
-/* NAVBAR */
-
-.navbar{
+.login-page{
 display:flex;
-justify-content:space-between;
-align-items:center;
-background:#222;
-color:white;
-padding:15px 30px;
-}
-
-.menu a{
-background:#007BFF;
-color:white;
-padding:8px 12px;
-margin-left:10px;
-text-decoration:none;
-border-radius:5px;
-}
-
-.menu button{
-background:#007BFF;
-color:white;
-border:none;
-padding:8px 12px;
-margin-left:10px;
-border-radius:5px;
-cursor:pointer;
-}
-
-/* PRODUCTOS */
-
-.container{
-display:flex;
-gap:30px;
 justify-content:center;
-margin-top:40px;
-flex-wrap:wrap;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#007BFF,#00c6ff);
 }
 
-.card{
+.login-container{
 background:white;
-width:200px;
-padding:20px;
-border-radius:10px;
+padding:40px;
+border-radius:12px;
 text-align:center;
-box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+width:320px;
+box-shadow:0px 6px 15px rgba(0,0,0,0.2);
 }
 
-.card button{
-background:#007BFF;
-color:white;
-border:none;
+.logo{
+width:120px;
+margin-bottom:15px;
+}
+
+.login-container input{
+width:90%;
 padding:10px;
-border-radius:5px;
-cursor:pointer;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.login-container button{
 width:100%;
+padding:10px;
+margin-top:10px;
+background:#007BFF;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
 }
 
-/* CARRITO */
-
-.cart-panel{
-position:fixed;
-right:-300px;
-top:0;
-width:300px;
-height:100%;
-background:white;
-box-shadow:-3px 0px 10px rgba(0,0,0,0.2);
-padding:20px;
-transition:0.3s;
-}
-
-.cart-panel.active{
-right:0;
-}
-
-.cart-panel ul{
-list-style:none;
-padding:0;
+.login-container button:hover{
+background:#0056b3;
 }
