@@ -55,7 +55,7 @@ function logout(){
 
 localStorage.removeItem("loggedUser")
 
-window.location = "index.html"
+window.location.href = "/"
 
 }
 function resetUser(){
