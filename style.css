@@ -44,3 +44,46 @@ cursor:pointer;
 .login-container button:hover{
 background:#0056b3;
 }
+/* LOGO NAVBAR */
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-small{
+width:40px;
+}
+
+/* PRODUCTO IMAGEN */
+
+.card img{
+width:80px;
+margin-bottom:10px;
+}
+
+/* SALUDO USUARIO */
+
+#welcome{
+color:white;
+margin-right:15px;
+font-weight:bold;
+}
+
+/* BOTONES NAVBAR */
+
+.menu button{
+background:#007BFF;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* HOVER BOTONES */
+
+button:hover{
+background:#0056b3;
+}
