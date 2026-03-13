@@ -53,9 +53,9 @@ welcome.textContent = "Hola, " + logged
 // CERRAR SESION
 function logout(){
 
-localStorage.removeItem("loggedUser")
+localStorage.clear()
 
-window.location.href = "/"
+window.location.href = "index.html"
 
 }
 function resetUser(){
